@@ -1,16 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.demo1.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane prefHeight="399.0" prefWidth="600.0">
+            <children>
+                <AnchorPane layoutX="299.0" prefHeight="405.0" prefWidth="301.0" styleClass="right-form" stylesheets="@loginDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="299.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label layoutX="88.0" layoutY="117.0" text="WELCOME BACK">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <PasswordField layoutX="41.0" layoutY="235.0" prefWidth="220.0" promptText="Password" styleClass="text-field" stylesheets="@loginDesign.css">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </PasswordField>
+                        <TextField layoutX="41.0" layoutY="182.0" prefWidth="220.0" promptText="Username" styleClass="text-field" stylesheets="@loginDesign.css">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </TextField>
+                        <Button layoutX="101.0" layoutY="302.0" mnemonicParsing="false" prefWidth="100.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="Log In">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="253.0" layoutY="1.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="48.0" styleClass="close" stylesheets="@loginDesign.css" text="Exit" textAlignment="CENTER" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="4.0">
+                            <font>
+                                <Font size="12.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="405.0" prefWidth="301.0" styleClass="left-form" stylesheets="@loginDesign.css">
+                    <children>
+                        <ImageView fx:id="brandingImageView" fitHeight="247.0" fitWidth="236.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@image/graduation_cap.png" />
+                        </image>
+                        </ImageView>
+                        <Label layoutX="31.0" layoutY="185.0" text="Student Management" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="25.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
